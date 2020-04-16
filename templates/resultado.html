@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado</title>
+    </head>
+    <body>
+        <h1>Resultados da pesquisa - {{valor_pesquisado}}</h1>
+        <h2>{{qtde_resultados}} Resultados</h2>
+        <table>
+            <tr>
+                <td><b>Texto</b></td>
+                <td><b>URL do Resultado</b></td>
+                <td>&nbsp;</td>
+            </tr>
+            {% for resultado in resultados %}
+                <tr>
+                    <td>{{resultado['Título']}}</td>
+                    <td>{{resultado['URL']}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p><a href="/" class="botao">Voltar</a></p>
+    </body>
+</html>
